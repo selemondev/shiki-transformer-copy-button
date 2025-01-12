@@ -1,0 +1,52 @@
+{
+  "name": "shiki-transformer-copy-button",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "description": "A Shiki based copy button transformer ✨",
+  "author": "Selemondev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selemondev/shiki-transformer-copy-button"
+  },
+  "bugs": {
+    "url": "https://github.com/selemondev/shiki-transformer-copy-button/issues"
+  },
+  "keywords": [
+    "typescript",
+    "shiki",
+    "shiki-transformers",
+    "shiki-transformer-copy-button"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "tsup src/index.ts --format cjs,esm --clean --dts --minify && pnpm lint:fix",
+    "generate:release": "npx changelogen@latest --release && npm publish --access=public && git push --follow-tags",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "hastscript": "^9.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.13.0",
+    "eslint": "^9.18.0",
+    "shiki": "^1.26.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  }
+}
