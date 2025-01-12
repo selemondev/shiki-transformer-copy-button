@@ -12,3 +12,15 @@ Shiki Copy Button Transformer ✨
     <img alt="npm-downloads-src" src="https://img.shields.io/npm/dm/@selemondev/shiki-transformer-copy-button.svg?style=flat&colorA=020420&colorB=00DC82" />
   </a>
 </p>
+
+Shiki Copy Button Transformer is a Shiki based transformer that adds a copy button on a code block. It is highly customizable and supports dark mode.
+
+## Features
+
+1. Dark mode support 🌑
+
+2. Highly customisable 🎨
+
+3. Duration 🕑
+
+4. Display mode 👀
