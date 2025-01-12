@@ -1,5 +1,5 @@
  <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/selemondev/@selemondev/shiki-transformer-copy-button/master/assets/logo/shiki-logo.svg" />
+<img align="center" src="https://raw.githubusercontent.com/selemondev/shiki-transformer-copy-button/master/assets/logo/shiki-logo.svg" />
 <h1 align="center">
 Shiki Copy Button Transformer ✨
 </h1>
