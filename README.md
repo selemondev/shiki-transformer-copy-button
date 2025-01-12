@@ -11,6 +11,8 @@ Shiki Copy Button Transformer ✨
   <a href="https://npmjs.com/package/@selemondev/shiki-transformer-copy-button">
     <img alt="npm-downloads-src" src="https://img.shields.io/npm/dm/@selemondev/shiki-transformer-copy-button.svg?style=flat&colorA=020420&colorB=00DC82" />
   </a>
+ <a href="https://pkg-size.dev/@selemondev/shiki-transformer-copy-button"><img src="https://pkg-size.dev/badge/install/226023" title="Install size for @selemondev/shiki-transformer-copy-button"></a>
+ <a href="https://pkg-size.dev/@selemondev/shiki-transformer-copy-button"><img src="https://pkg-size.dev/badge/bundle/27398" title="Bundle size for @selemondev/shiki-transformer-copy-button"></a>
 </p>
 
 > [!NOTE]
