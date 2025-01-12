@@ -1,7 +1,7 @@
  <p align="center">
 <img align="center" src="https://raw.githubusercontent.com/selemondev/shiki-transformer-copy-button/master/assets/logo/shiki-logo.svg" />
 <h1 align="center">
-Shiki Copy Button Transformer ✨
+> Shiki Copy Button Transformer ✨
 </h1>
 </p>
 <p align="center">
@@ -15,6 +15,20 @@ Shiki Copy Button Transformer ✨
 
 Shiki Copy Button Transformer is a Shiki based transformer that adds a copy button on a code block. It is highly customizable and supports dark mode.
 
+## Installation
+
+```bash
+npm install @selemondev/shiki-transformer-copy-button
+```
+
+## Usage
+
+Import the `transformerCopyButton` transformer as shown below and use it alongside your code block:
+
+```ts
+import { transformerCopyButton } from "@selemondev/shiki-transformer-copy-button"
+```
+
 ## Features
 
 1. Dark mode support 🌑
@@ -24,3 +38,13 @@ Shiki Copy Button Transformer is a Shiki based transformer that adds a copy butt
 3. Duration 🕑
 
 4. Display mode 👀
+
+## Props
+
+| name          |     type      |           default         |       description             |
+|:-------------:|:-------------:|:-------------------------:|   :-----------------:         |
+|  duration   | `Number`      |         `3000`                | The time it takes for the copy icon to revert to its default state after the copy button is triggered. |
+|  display   | `ready | hover`      |         `ready`           | If the display is set to `hover`, the copy button will be visible when the user interacts with the code block component. If set to `ready`, the copy button will always be visible!  |
+|  copyIcon   | `string`      |         `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3C/svg%3E`                | The default copy svg icon |
+|  successIcon   | `string`      |      `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3Cpath d='m9 14 2 2 4-4'/%3E%3C/svg%3E`                | The default success svg icon that is display after the copy button is triggered.  |
+
