@@ -2,9 +2,10 @@ import type { CopyButtonOptions } from '@/types/CopyButtonOptions.interface'
 import type { ShikiTransformer } from 'shiki'
 import { h } from 'hastscript'
 import { buttonStyles } from '../buttonStyles'
+import { removeCodeAnnotations } from '../utils/removeCodeAnnotations'
 
 // Inspired by shiki-transformer-copy-button (https://github.com/joshnuss/shiki-transformer-copy-button).
-// Modified by adding support for display mode and ARIA attributes for improved accessibility.
+// Modified by adding support for display mode, code annotations removal and ARIA attributes for improved accessibility.
 
 export function transformerCopyButton(options: CopyButtonOptions = {
   duration: 3000,
@@ -18,7 +19,7 @@ export function transformerCopyButton(options: CopyButtonOptions = {
         'role': 'button',
         'aria-label': 'Copy to clipboard',
         'aria-live': 'polite',
-        'data-code': this.source,
+        'data-code': removeCodeAnnotations(this.source),
         'onclick': `
                 navigator.clipboard.writeText(this.dataset.code);
                 this.classList.add('shiki-transformer-button-copied');
