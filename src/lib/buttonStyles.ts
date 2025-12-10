@@ -25,10 +25,10 @@ export function buttonStyles({
       --button-success-icon-height: 20px;
       }`,
 }: {
-  successIcon?: string;
-  copyIcon?: string;
-  display?: string;
-  cssVariables?: string;
+  successIcon?: string
+  copyIcon?: string
+  display?: string
+  cssVariables?: string
 }) {
   let buttonStyle = `${cssVariables}
       pre:has(code) {
@@ -146,9 +146,9 @@ export function buttonStyles({
       html.dark pre:has(code) button.shiki-transformer-button-copy:hover .success {
         background-color: var(--dark-background-color-hover) !important;
       }
-    `;
+    `
 
-  if (display === "hover") {
+  if (display === 'hover') {
     buttonStyle += `
       pre:has(code) button.shiki-transformer-button-copy {
         opacity: 0;
@@ -156,14 +156,15 @@ export function buttonStyles({
       pre:has(code):hover button.shiki-transformer-button-copy {
         opacity: 1;
       }
-    `;
-  } else {
+    `
+  }
+  else {
     buttonStyle += `
       pre:has(code) button.shiki-transformer-button-copy {
         opacity: 1;
       }
-    `;
+    `
   }
 
-  return buttonStyle;
+  return buttonStyle
 }
