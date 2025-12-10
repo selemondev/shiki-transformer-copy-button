@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.0.1
+
+[compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v0.0.2...v1.0.1)
+
+### 🏡 Chore
+
+- **release:** V0.0.2 ([dabe75d](https://github.com/selemondev/shiki-transformer-copy-button/commit/dabe75d))
+- **release:** Refactor workflow ([2a54db9](https://github.com/selemondev/shiki-transformer-copy-button/commit/2a54db9))
+
+### 🎨 Styles
+
+- Prevent copy button from scrolling and remove CSS nesting ([f9d4ab3](https://github.com/selemondev/shiki-transformer-copy-button/commit/f9d4ab3))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v0.0.1...v0.0.2)
