@@ -21,21 +21,26 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+         "types": "./dist/index.d.mts",
+         "default": "./dist/index.mjs"
+       },
+       "require": {
+         "types": "./dist/index.d.cts",
+         "default": "./dist/index.cjs"
+       }
     }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "build": "tsup src/index.ts --format cjs,esm --clean --dts --minify && pnpm lint:fix",
+    "build": "tsdown src/index.ts --format cjs,esm --clean --exports true --dts && pnpm lint:fix",
     "generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
     "prepublishOnly": "pnpm build"
   },
@@ -46,7 +51,7 @@
     "@antfu/eslint-config": "^3.13.0",
     "eslint": "^9.18.0",
     "shiki": "^1.26.1",
-    "tsup": "^8.3.5",
+    "tsdown": "^0.17.2",
     "typescript": "^5.7.3"
   }
 }
