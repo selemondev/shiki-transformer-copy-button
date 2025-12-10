@@ -4,7 +4,11 @@
 Shiki Copy Button Transformer ✨
 </h1>
 </p>
+
 <p align="center">
+   <a href="https://github.com/selemondev/shiki-transformer-copy-button/actions/workflows/ci.yml">
+   <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/selemondev/shiki-transformer-copy-button/ci.yml">
+  </a>
   <a href="https://www.npmjs.com/package/@selemondev/shiki-transformer-copy-button">
     <img alt="npm-version-src" src="https://img.shields.io/npm/v/@selemondev/shiki-transformer-copy-button/latest.svg?style=flat&colorA=020420&colorB=00DC82" />
   </a>
