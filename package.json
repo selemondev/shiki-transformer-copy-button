@@ -2,7 +2,7 @@
   "name": "@selemondev/shiki-transformer-copy-button",
   "type": "module",
   "version": "1.0.1",
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "packageManager": "pnpm@9.15.9",
   "description": "A Shiki based copy button transformer ✨",
   "author": "Selemondev",
   "license": "MIT",
@@ -22,13 +22,13 @@
   "exports": {
     ".": {
       "import": {
-         "types": "./dist/index.d.mts",
-         "default": "./dist/index.mjs"
-       },
-       "require": {
-         "types": "./dist/index.d.cts",
-         "default": "./dist/index.cjs"
-       }
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "main": "./dist/index.cjs",
@@ -45,13 +45,13 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "hastscript": "^9.0.0"
+    "hastscript": "^9.0.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.13.0",
-    "eslint": "^9.18.0",
-    "shiki": "^1.26.1",
+    "@antfu/eslint-config": "^6.6.1",
+    "eslint": "^9.39.1",
+    "shiki": "^1.29.2",
     "tsdown": "^0.17.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   }
 }
