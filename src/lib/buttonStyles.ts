@@ -9,11 +9,11 @@ export function buttonStyles({
       --border-color: #e2e2e3;
       --background-color: #f6f6f7;
       --hover-background-color: #ffff;
-      --dark-background-color: #202127;
+      --dark-background-color: transparent;
       --dark-border-color: #2e2e32;
       --dark-background-color-hover: #1b1b1f;
       --dark-border-color-hover: #2e2e32;
-      --button-top: 12px;
+      --button-top: 14px;
       --button-right: 12px;
       --button-z-index: 3;
       --button-border-radius: 4px;
@@ -25,84 +25,92 @@ export function buttonStyles({
       --button-success-icon-height: 20px;
       }`,
 }: {
-  successIcon?: string
-  copyIcon?: string
-  display?: string
-  cssVariables?: string
+  successIcon?: string;
+  copyIcon?: string;
+  display?: string;
+  cssVariables?: string;
 }) {
-  let buttonStyle
-          = `${cssVariables}
+  let buttonStyle = `${cssVariables}
       pre:has(code) {
-          position: relative;
+        position: relative;
+        overflow: hidden;
       }
-      
-      pre button.shiki-transformer-button-copy {
-          position: absolute;
-          top: var(--button-top);
-          right: var(--button-right);
-          z-index: var(--button-z-index);
-          border: 1px solid var(--border-color);
-          border-radius: var(--button-border-radius);
-          width: var(--button-width);
-          height: var(--button-height);
-          display: flex;
-          justify-content: center;
-          place-items: center;
-          background-color: var(--background-color);
-          cursor: pointer;
-          background-repeat: no-repeat;
-          transition: background .25s, opacity .25s;
-          opacity: 1;
-          &:hover {
-              background-color: var(--hover-background-color);
-          }
-      
-          & span {
-              width: 100%;
-              aspect-ratio: 1 / 1;
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-      
-          & .ready {
-              width: var(--button-ready-icon-width);
-              background: none;
-              border: none;
-              height: var(--button-ready-icon-height);
-              background-image: url("${copyIcon}");
-          }
-      
-          & .success {
-              display: none;
-              width: var(--button-success-icon-width);
-              height: var(--button-success-icon-height);
-              background-image: url("${successIcon}");
-          }
-      
-          &.shiki-transformer-button-copied {
-              & .success {
-                  display: block;
-              }
-      
-              & .ready {
-                  display: none;
-              }
-          }
+
+      pre:has(code) > code {
+        overflow-x: auto;
+        display: block;
       }
+
+      pre:has(code) button.shiki-transformer-button-copy {
+        position: absolute;
+        top: var(--button-top);
+        right: var(--button-right);
+        z-index: var(--button-z-index);
+        border: 1px solid var(--border-color);
+        border-radius: var(--button-border-radius);
+        width: var(--button-width);
+        height: var(--button-height);
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        background-color: var(--background-color);
+        cursor: pointer;
+        background-repeat: no-repeat;
+        transition: background .25s, opacity .25s;
+        opacity: 1;
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy:hover {
+        background-color: var(--hover-background-color);
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy span {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy .ready {
+        width: var(--button-ready-icon-width);
+        height: var(--button-ready-icon-height);
+        background-image: url("${copyIcon}");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy .success {
+        display: none;
+        width: var(--button-success-icon-width);
+        height: var(--button-success-icon-height);
+        background-image: url("${successIcon}");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy.shiki-transformer-button-copied .success {
+        display: block;
+      }
+
+      pre:has(code) button.shiki-transformer-button-copy.shiki-transformer-button-copied .ready {
+        display: none;
+      }
+
       @media screen and (prefers-color-scheme: dark) {
-       pre button.shiki-transformer-button-copy {
+        pre:has(code) button.shiki-transformer-button-copy {
           background-color: var(--dark-background-color);
           border: 1px solid var(--dark-border-color);
-       }
-      
-        pre button.shiki-transformer-button-copy:hover {
-          background-color: var(--dark-background-color);
-          border: 1px solid var(--dark-border-color);
-       }
-      
-        .shiki,
-        .shiki span {
+        }
+
+        pre:has(code) button.shiki-transformer-button-copy:hover {
+          background-color: var(--dark-background-color-hover);
+          border: 1px solid var(--dark-border-color-hover);
+        }
+
+        .shiki, .shiki span {
           color: var(--shiki-dark) !important;
           background-color: var(--shiki-dark-bg) !important;
           font-style: var(--shiki-dark-font-style) !important;
@@ -110,62 +118,52 @@ export function buttonStyles({
           text-decoration: var(--shiki-dark-text-decoration) !important;
         }
       }
-      
-      .dark pre button.shiki-transformer-button-copy {
+
+      .dark pre:has(code) button.shiki-transformer-button-copy {
         background-color: var(--dark-background-color);
         border: 1px solid var(--dark-border-color);
       }
-      
-      .dark pre button.shiki-transformer-button-copy:hover {
+
+      .dark pre:has(code) button.shiki-transformer-button-copy:hover {
         background-color: var(--dark-background-color-hover);
         border: 1px solid var(--dark-border-color-hover);
       }
-      html.dark .shiki,
-      html.dark .shiki span {
+
+      html.dark .shiki, html.dark .shiki span {
         color: var(--shiki-dark) !important;
         background-color: var(--shiki-dark-bg) !important;
         font-style: var(--shiki-dark-font-style) !important;
         font-weight: var(--shiki-dark-font-weight) !important;
         text-decoration: var(--shiki-dark-text-decoration) !important;
       }
-      
-      html.dark pre button.shiki-transformer-button-copy {
-      & .ready {
-        background-color: var(--dark-background-color) !important;
-      }
-        & .success {
-        background-color: var(--dark-background-color) !important;
-      }
-      }
-      
-      html.dark pre button.shiki-transformer-button-copy:hover {
-      & .ready {
-        background-color: var(--dark-background-color-hover) !important;
-      }
-      
-      & .success {
-        background-color: var(--dark-background-color-hover) !important;
-      }
-      }
-      `
 
-  if (display === 'hover') {
-    buttonStyle += `
-      pre button.shiki-transformer-button-copy {
-        opacity: 0
+      html.dark pre:has(code) button.shiki-transformer-button-copy .ready,
+      html.dark pre:has(code) button.shiki-transformer-button-copy .success {
+        background-color: var(--dark-background-color) !important;
       }
-  
-      pre:hover button.shiki-transformer-button-copy {
-        opacity: 1
+
+      html.dark pre:has(code) button.shiki-transformer-button-copy:hover .ready,
+      html.dark pre:has(code) button.shiki-transformer-button-copy:hover .success {
+        background-color: var(--dark-background-color-hover) !important;
       }
-      `
-  }
-  else {
+    `;
+
+  if (display === "hover") {
     buttonStyle += `
-          pre button.shiki-transformer-button-copy {
-            opacity: 1
-          }
-          `
+      pre:has(code) button.shiki-transformer-button-copy {
+        opacity: 0;
+      }
+      pre:has(code):hover button.shiki-transformer-button-copy {
+        opacity: 1;
+      }
+    `;
+  } else {
+    buttonStyle += `
+      pre:has(code) button.shiki-transformer-button-copy {
+        opacity: 1;
+      }
+    `;
   }
-  return buttonStyle
+
+  return buttonStyle;
 }
