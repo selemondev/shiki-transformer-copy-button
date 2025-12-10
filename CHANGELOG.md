@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v1.0.1...v1.0.2)
+
+### 🏡 Chore
+
+- **package.json:** Update release script ([694635c](https://github.com/selemondev/shiki-transformer-copy-button/commit/694635c))
+- **release:** Refactor workflow ([ffcd28e](https://github.com/selemondev/shiki-transformer-copy-button/commit/ffcd28e))
+- **bundler:** Migrate to tsdown ([fadc1eb](https://github.com/selemondev/shiki-transformer-copy-button/commit/fadc1eb))
+- Update dependencies ([467f648](https://github.com/selemondev/shiki-transformer-copy-button/commit/467f648))
+
+### 🎨 Styles
+
+- **ui:** Update ([af96ac4](https://github.com/selemondev/shiki-transformer-copy-button/commit/af96ac4))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.0.1
 
 [compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v0.0.2...v1.0.1)
