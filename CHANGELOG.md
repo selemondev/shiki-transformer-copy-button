@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v1.0.2...v1.0.3)
+
+### 🩹 Fixes
+
+- **style:** Prevent Shiki override ([e879bbe](https://github.com/selemondev/shiki-transformer-copy-button/commit/e879bbe))
+
+### 📖 Documentation
+
+- Update README with GitHub Actions workflow badge ([43276e6](https://github.com/selemondev/shiki-transformer-copy-button/commit/43276e6))
+
+### 🏡 Chore
+
+- Lint ([448fd49](https://github.com/selemondev/shiki-transformer-copy-button/commit/448fd49))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+
 ## v1.0.2
 
 [compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v1.0.1...v1.0.2)
