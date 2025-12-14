@@ -27,7 +27,7 @@ export function buttonStyles({
 }: {
   successIcon?: string
   copyIcon?: string
-  display?: "hover" | "always"
+  display?: 'hover' | 'ready'
   enableDarkMode?: boolean
   cssVariables?: string
 }) {
@@ -89,7 +89,7 @@ pre:has(code) > button.shiki-transformer-button-copy.shiki-transformer-button-co
 }
 `
 
-  if (display === "hover") {
+  if (display === 'hover') {
     styles += `
 pre:has(code) > button.shiki-transformer-button-copy {
   opacity: 0;

@@ -1,5 +1,5 @@
-import type { CopyButtonOptions } from '@/types/CopyButtonOptions.interface'
 import type { ShikiTransformer } from 'shiki'
+import type { CopyButtonOptions } from '@/types/CopyButtonOptions.interface'
 import { h } from 'hastscript'
 import { buttonStyles } from '../buttonStyles'
 import { removeCodeAnnotations } from '../utils/removeCodeAnnotations'
