@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v1.0.3...v1.1.0)
+
+### 🚀 Enhancements
+
+- Improve API and code structure ([6eb9dd6](https://github.com/selemondev/shiki-transformer-copy-button/commit/6eb9dd6))
+
+### 📖 Documentation
+
+- Update README.md file ([ecd19dc](https://github.com/selemondev/shiki-transformer-copy-button/commit/ecd19dc))
+
+### 🏡 Chore
+
+- Update scripts ([8f32488](https://github.com/selemondev/shiki-transformer-copy-button/commit/8f32488))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.0.3
 
 [compare changes](https://github.com/selemondev/shiki-transformer-copy-button/compare/v1.0.2...v1.0.3)
