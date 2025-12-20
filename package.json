@@ -35,7 +35,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "build": "tsdown src/index.ts --format cjs,esm --clean --exports true --dts && pnpm lint:fix",
+    "build": "tsdown src/index.ts --format cjs,esm --exports true --dts",
     "generate:release": "pnpx changelogen@latest --release && git push --follow-tags",
     "prepublishOnly": "pnpm build"
   },
