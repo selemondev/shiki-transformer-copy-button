@@ -79,3 +79,7 @@ const html = await codeToHtml(installationCode, {
 - [shiki-transformer-copy-button](https://github.com/joshnuss/shiki-transformer-copy-button) by Josh Nuss.
 
 - [rehype-pretty-code](https://github.com/rehype-pretty/rehype-pretty-code) by rehype-pretty.
+
+## License
+
+[MIT](./LICENSE) © [Selemon Brahanu](https://selemon.dev)
